@@ -12,6 +12,7 @@ on:
 jobs:
   # Job para fazer o build e a compactação da lambda auth function.
   build-lambda:
+    name: Build and Zip Lambda Auth function
     runs-on: ubuntu-latest
 
     steps:
@@ -25,16 +26,13 @@ jobs:
 
     - name: Build Lambda Auth function
       run: |
-        echo "Pasta src"
-        cd src
         echo "Build da função Lambda"
+        cd src
         GOOS=linux GOARCH=amd64 go build -o bootstrap main.go
-        zip -j bootstrap .zip bootstrap
+        zip -j bootstrap.zip bootstrap
         echo "Diretório raiz"
         cd ..
-        echo "Criando diretório bin, se não existir"
         mkdir -p bin
-        echo "Movendo o arquivo zip para a pasta bin"
         mv src/bootstrap.zip bin/
         
   # Job para verificação do terraform do lambda auth em pull requests e merge para a main e push da main 
