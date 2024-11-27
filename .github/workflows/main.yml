@@ -25,12 +25,17 @@ jobs:
 
     - name: Build Lambda Auth function
       run: |
+        echo "Pasta src"
+        cd src
+        echo "Build da função Lambda"
         GOOS=linux GOARCH=amd64 go build -o bootstrap main.go
         zip -j bootstrap .zip bootstrap
+        echo "Diretório raiz"
+        cd ..
         echo "Criando diretório bin, se não existir"
         mkdir -p bin
         echo "Movendo o arquivo zip para a pasta bin"
-        mv bootstrap.zip bin/
+        mv src/bootstrap.zip bin/
         
   # Job para verificação do terraform do lambda auth em pull requests e merge para a main e push da main 
   push-lambda:
