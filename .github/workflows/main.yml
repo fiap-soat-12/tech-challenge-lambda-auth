@@ -28,7 +28,11 @@ jobs:
       run: |
         chmod +x ./build_lambda.sh  # Garantir que o script tenha permissão de execução
         ./build_lambda.sh  # Executar o script que compila e move o arquivo
-        
+
+    # Debug: Verificar se o arquivo zip foi criado
+    - name: List files in bin directory
+      run: ls -alh ./bin  # Listar os arquivos para garantir que o bootstrap.zip foi criado
+
   # Job para verificação do terraform do lambda auth em pull requests e merge para a main e push da main 
   push-lambda:
     name: Terraform Verification and Push Lambda Auth
