@@ -31,10 +31,10 @@ jobs:
         GOOS=linux GOARCH=amd64 go build -o bootstrap main.go
         zip -j bootstrap.zip bootstrap
         echo "Diretório raiz"
-        cd..
+        cd ..
         mkdir -p bin
         mv src/bootstrap.zip bin/
-        cd..
+        cd ..
         
   # Job para verificação do terraform do lambda auth em pull requests e merge para a main e push da main 
   push-lambda:
