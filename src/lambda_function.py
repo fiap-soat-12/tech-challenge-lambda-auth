@@ -4,7 +4,7 @@ import os
 from jose import jwt, JWTError
 from jose import jwk
 
-USER_POOL_ID = os.environ.get('USER_POOL_ID', 'us-east-1_lmpQVedyx')
+USER_POOL_ID = os.getenv('USER_POOL_ID', 'us-east-1_lmpQVedyx')
 REGION = os.getenv('AWS_REGION', 'us-east-1')
 COGNITO_ISSUER = f'https://cognito-idp.{REGION}.amazonaws.com/{USER_POOL_ID}'
 JWKS_URL = f"{COGNITO_ISSUER}/.well-known/jwks.json"
