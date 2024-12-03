@@ -1,13 +1,8 @@
 #!/bin/bash
 
-import shutil
-import subprocess
-import zipfile
-import json
-import requests
 import os
-from jose import jwt, JWTError
-from jose import jwk
+import shutil
+import zipfile
 
 # Entrando na pasta src e compilando
 print("Entrando na pasta src e preparando o empacotamento")
