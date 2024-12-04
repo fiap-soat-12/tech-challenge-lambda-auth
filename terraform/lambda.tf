@@ -31,7 +31,7 @@ resource "aws_lambda_function" "aws-lambda" {
 
   environment {
     variables = {
-      AWS_REGION = var.aws_region
+      CUSTOM_AWS_REGION = var.aws_region
     }
   }
 }
