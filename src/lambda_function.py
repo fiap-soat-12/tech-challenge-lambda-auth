@@ -13,7 +13,7 @@ cached_keys = None
 
 def lambda_handler(event, context):
     token = extract_token(event.get('headers', {}))
-    method_arn = event.get('method_arn')
+    method_arn = event.get('methodArn')
 
     if not token:
         return generate_policy("Deny", method_arn)
