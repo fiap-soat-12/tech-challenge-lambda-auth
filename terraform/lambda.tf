@@ -28,10 +28,4 @@ resource "aws_lambda_function" "aws-lambda" {
     subnet_ids         = [for subnet in data.aws_subnet.selected_subnets : subnet.id]
     security_group_ids = [aws_security_group.lambda-sg.id]
   }
-
-  environment {
-    variables = {
-      CUSTOM_AWS_REGION = var.aws_region
-    }
-  }
 }
