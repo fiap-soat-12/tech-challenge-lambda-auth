@@ -34,7 +34,6 @@ Este repositório é responsável criar a lambda authorize.
 
 ### Desenvolvimento
 
-- **[Kubernetes](https://kubernetes.io/pt-br/docs/home/)**: Documentação oficial do Kubernetes.
 - **[Terraform](https://www.terraform.io/)**: Site oficial do Terraform.
 - **[AWS](https://aws.amazon.com/pt/)**: Site oficial da AWS.
 - **[Python](https://docs.python.org/pt-br/3/)**: Documentação oficial do Python.
