@@ -30,7 +30,7 @@ Este repositório é responsável criar a lambda authorize.
 1. É necessário executar a pipeline para criar o VPC no repositório: https://github.com/fiap-soat-12/fiap-soat-tech-challenge-vpc
 2. É necessário executar a pipeline para criar o RDS no repositório: https://github.com/fiap-soat-12/fiap-soat-tech-challenge-db
 3. É necessário executar a pipeline para criar a imagem no ECR no repositório: https://github.com/fiap-soat-12/fiap-soat-tech-challenge-api
-4. É necessário executar a pipeline para criar o imagem no Cluster e a Infraestrutura no repositório: https://github.com/fiap-soat-12/fiap-soat-tech-challenge-k8s
+4. É necessário executar a pipeline para criar o Cluster e a Infraestrutura no repositório: https://github.com/fiap-soat-12/fiap-soat-tech-challenge-k8s
 
 ### Desenvolvimento
 
@@ -50,7 +50,7 @@ Este repositório é responsável criar a lambda authorize.
   2. Certificar que o `aws cli` está instalado e configurado com as credenciais da sua conta AWS;
   ![aws-cli-version](./assets/aws-cli-version.png)
 
-  3. Acessar a pasta `terraform` que contém os arquivos que irão criar a VPC;
+  3. Acessar a pasta `terraform` que contém os arquivos que irão criar a lambda authorize;
   4. Inicializar o Terraform no projeto `terraform init`;
   5. Verificar que o script do Terraform é valido rodando o comando `terraform validate`;
   6. Executar o comando `terraform plan` para executar o planejamento da execução/implementação;
